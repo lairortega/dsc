@@ -1,0 +1,208 @@
+2024-05-08T19:48:29.615Z snyk:config dir: /snapshot/snyk/dist/cli/../.., local: /snapshot/snyk/config.local.json, secret: /snapshot/snyk/config.secret.json
+2024-05-08T19:48:29.620Z snyk:config loading from /snapshot/snyk/dist/cli/../.. {
+  "devDeps": false,
+  "PRUNE_DEPS_THRESHOLD": 40000,
+  "MAX_PATH_COUNT": 1500000,
+  "NPM_TREE_SIZE_LIMIT": 6000000,
+  "YARN_TREE_SIZE_LIMIT": 6000000,
+  "_": [
+    "test"
+  ],
+  "all-projects": true,
+  "org": "0e832e2f-6ab8-44f8-a2f8-40db8e6cf003",
+  "$0": "/Users/jortega/Library/Caches/snyk/snyk-cli/1.1183.0/snyk-macos",
+  "SYSTEM_HTTPS_PROXY": "",
+  "INTEGRATION_VERSION": "1.1183.0",
+  "INTEGRATION_NAME": "CLI_V1_PLUGIN",
+  "SYSTEM_HTTP_PROXY": "",
+  "SYSTEM_NO_PROXY": ""
+}
+2024-05-08T19:48:29.629Z snyk test <ref *1> {
+  _: [ [Circular *1] ],
+  org: '0e832e2f-6ab8-44f8-a2f8-40db8e6cf003',
+  allProjects: true
+}
+2024-05-08T19:48:29.976Z snyk:config dir: /snapshot/snyk/dist/cli../.., local: /snapshot/snyk/dist/config.local.json, secret: /snapshot/snyk/dist/config.secret.json
+2024-05-08T19:48:29.978Z snyk:config loading from /snapshot/snyk/dist/cli../.. {
+  "_": [
+    "test"
+  ],
+  "all-projects": true,
+  "org": "0e832e2f-6ab8-44f8-a2f8-40db8e6cf003",
+  "$0": "/Users/jortega/Library/Caches/snyk/snyk-cli/1.1183.0/snyk-macos",
+  "SYSTEM_HTTPS_PROXY": "",
+  "INTEGRATION_VERSION": "1.1183.0",
+  "INTEGRATION_NAME": "CLI_V1_PLUGIN",
+  "SYSTEM_HTTP_PROXY": "",
+  "SYSTEM_NO_PROXY": ""
+}
+2024-05-08T19:48:30.151Z snyk:spinner spinner: Analyzing all dependencies for pipeline-vulnerabilities-threshold-critical project dir
+2024-05-08T19:48:30.152Z snyk:spinner creating spinner
+2024-05-08T19:48:30.155Z snyk-test auto detect manifest files, found 1 [
+  '/Users/jortega/repositorios/security/tests/python/pipeline-vulnerabilities-threshold-critical/poetry.lock'
+]
+2024-05-08T19:48:30.156Z snyk-yarn-workspaces Processing potential Yarn workspaces (1)
+2024-05-08T19:48:30.156Z snyk-yarn-workspaces No yarn workspaces detected in any of the 1 target files.
+2024-05-08T19:48:30.159Z snyk-npm-workspaces Processing potential Npm workspaces (1)
+2024-05-08T19:48:30.160Z snyk-npm-workspaces No npm workspaces detected in any of the 1 target files.
+2024-05-08T19:48:30.160Z snyk-test Not part of a workspace: /Users/jortega/repositorios/security/tests/python/pipeline-vulnerabilities-threshold-critical/poetry.lock}
+2024-05-08T19:48:30.161Z snyk-module-info calling plugin inspect() {
+  root: '/Users/jortega/repositorios/security/tests/python/pipeline-vulnerabilities-threshold-critical',
+  targetFile: 'poetry.lock',
+  pluginOptions: {
+    args: undefined,
+    _: [ [Object] ],
+    org: '0e832e2f-6ab8-44f8-a2f8-40db8e6cf003',
+    allProjects: true,
+    showVulnPaths: 'some',
+    path: '/Users/jortega/repositorios/security/tests/python/pipeline-vulnerabilities-threshold-critical',
+    projectName: undefined,
+    allSubProjects: true,
+    file: 'poetry.lock',
+    packageManager: 'poetry'
+  }
+}
+2024-05-08T19:48:30.225Z snyk-test 
+✗ Failed to get dependencies for /Users/jortega/repositorios/security/tests/python/pipeline-vulnerabilities-threshold-critical/poetry.lock
+ERROR: Error processing poetry project. /bin/sh: python: command not found
+
+
+2024-05-08T19:48:30.226Z snyk:spinner clearing Analyzing all dependencies for pipeline-vulnerabilities-threshold-critical project dir (1)
+2024-05-08T19:48:30.226Z snyk:run-test Error running test {
+  error: FailedToRunTestError: Failed to get dependencies for all 1 potential projects.
+  Tip: Re-run in debug mode to see more information: DEBUG=*snyk* <COMMAND>
+  If the issue persists contact support@snyk.io
+      at Object.getMultiPluginResult [as handler] (/snapshot/snyk/dist/cli/webpack:/snyk/src/lib/plugins/get-multi-plugin-result.ts:122:11)
+      at Object.getDepsFromPlugin (/snapshot/snyk/dist/cli/webpack:/snyk/src/lib/plugins/get-deps-from-plugin.ts:62:24)
+      at assembleLocalPayloads (/snapshot/snyk/dist/cli/webpack:/snyk/src/lib/snyk-test/run-test.ts:595:18)
+      at runTest (/snapshot/snyk/dist/cli/webpack:/snyk/src/lib/snyk-test/run-test.ts:338:22)
+      at test (/snapshot/snyk/dist/cli/webpack:/snyk/src/cli/commands/test/index.ts:155:13)
+      at runCommand (/snapshot/snyk/dist/cli/webpack:/snyk/src/cli/main.ts:51:25)
+      at main (/snapshot/snyk/dist/cli/webpack:/snyk/src/cli/main.ts:310:11)
+      at /snapshot/snyk/dist/cli/webpack:/snyk/src/cli/index.ts:13:3
+      at Object.callHandlingUnexpectedErrors (/snapshot/snyk/dist/cli/webpack:/snyk/src/lib/unexpected-error.ts:28:5) {
+    code: 500,
+    strCode: undefined,
+    innerError: undefined,
+    userMessage: 'Failed to get dependencies for all 1 potential projects.\n' +
+      'Tip: Re-run in debug mode to see more information: DEBUG=*snyk* <COMMAND>\n' +
+      'If the issue persists contact support@snyk.io'
+  }
+}
+2024-05-08T19:48:30.634Z snyk-test Failed to test 1 projects, errors:
+2024-05-08T19:48:30.636Z snyk-test error: FailedToRunTestError: Failed to get dependencies for all 1 potential projects.
+Tip: Re-run in debug mode to see more information: DEBUG=*snyk* <COMMAND>
+If the issue persists contact support@snyk.io
+    at runTest (/snapshot/snyk/dist/cli/webpack:/snyk/src/lib/snyk-test/run-test.ts:375:11)
+    at test (/snapshot/snyk/dist/cli/webpack:/snyk/src/cli/commands/test/index.ts:155:13)
+    at runCommand (/snapshot/snyk/dist/cli/webpack:/snyk/src/cli/main.ts:51:25)
+    at main (/snapshot/snyk/dist/cli/webpack:/snyk/src/cli/main.ts:310:11)
+    at /snapshot/snyk/dist/cli/webpack:/snyk/src/cli/index.ts:13:3
+    at Object.callHandlingUnexpectedErrors (/snapshot/snyk/dist/cli/webpack:/snyk/src/lib/unexpected-error.ts:28:5)
+2024-05-08T19:48:30.636Z snyk:spinner clearing Analyzing all dependencies for pipeline-vulnerabilities-threshold-critical project dir (0)
+2024-05-08T19:48:30.643Z snyk Exit code: 2
+2024-05-08T19:48:30.643Z snyk analytics {
+  "args": [
+    {
+      "org": "0e832e2f-6ab8-44f8-a2f8-40db8e6cf003",
+      "allProjects": true
+    }
+  ],
+  "command": "bad-command",
+  "org": "0e832e2f-6ab8-44f8-a2f8-40db8e6cf003",
+  "metadata": {
+    "upgradable-snyk-protect-paths": 0,
+    "local": true,
+    "error-message": "\nTesting /Users/jortega/repositorios/security/tests/python/pipeline-vulnerabilities-threshold-critical...\n\nFailed to get dependencies for all 1 potential projects.\nTip: Re-run in debug mode to see more information: DEBUG=*snyk* <COMMAND>\nIf the issue persists contact support@snyk.io",
+    "error": "Error: \nTesting /Users/jortega/repositorios/security/tests/python/pipeline-vulnerabilities-threshold-critical...\n\nFailed to get dependencies for all 1 potential projects.\nTip: Re-run in debug mode to see more information: DEBUG=*snyk* <COMMAND>\nIf the issue persists contact support@snyk.io\n    at test (/snapshot/snyk/dist/cli/webpack:/snyk/src/cli/commands/test/index.ts:286:19)\n    at runCommand (/snapshot/snyk/dist/cli/webpack:/snyk/src/cli/main.ts:51:25)\n    at main (/snapshot/snyk/dist/cli/webpack:/snyk/src/cli/main.ts:310:11)\n    at /snapshot/snyk/dist/cli/webpack:/snyk/src/cli/index.ts:13:3\n    at Object.callHandlingUnexpectedErrors (/snapshot/snyk/dist/cli/webpack:/snyk/src/lib/unexpected-error.ts:28:5)",
+    "error-code": 500,
+    "command": "test"
+  },
+  "os": "macOS Ventura",
+  "osPlatform": "darwin",
+  "osRelease": "22.1.0",
+  "osArch": "x64",
+  "version": "1.1183.0",
+  "nodeVersion": "v16.16.0",
+  "standalone": true,
+  "integrationName": "CLI_V1_PLUGIN",
+  "integrationVersion": "1.1183.0",
+  "integrationEnvironment": "",
+  "integrationEnvironmentVersion": "",
+  "id": "6809e608fa6e62fa8d1c9612757eea5ab2c6af30",
+  "ci": false,
+  "durationMs": 1015,
+  "metrics": {
+    "network_time": {
+      "type": "timer",
+      "values": [],
+      "total": 0
+    },
+    "cpu_time": {
+      "type": "synthetic",
+      "values": [
+        1015
+      ],
+      "total": 1015
+    }
+  }
+}
+2024-05-08T19:48:30.644Z snyk-metrics Timer timer/network_time started at 1715197710644.
+2024-05-08T19:48:30.644Z snyk:req compressing request body
+2024-05-08T19:48:30.644Z snyk:req {
+  "data": {
+    "args": [
+      {
+        "org": "0e832e2f-6ab8-44f8-a2f8-40db8e6cf003",
+        "allProjects": true
+      }
+    ],
+    "command": "bad-command",
+    "org": "0e832e2f-6ab8-44f8-a2f8-40db8e6cf003",
+    "metadata": {
+      "upgradable-snyk-protect-paths": 0,
+      "local": true,
+      "error-message": "\nTesting /Users/jortega/repositorios/security/tests/python/pipeline-vulnerabilities-threshold-critical...\n\nFailed to get dependencies for all 1 potential projects.\nTip: Re-run in debug mode to see more information: DEBUG=*snyk* <COMMAND>\nIf the issue persists contact support@snyk.io",
+      "error": "Error: \nTesting /Users/jortega/repositorios/security/tests/python/pipeline-vulnerabilities-threshold-critical...\n\nFailed to get dependencies for all 1 potential projects.\nTip: Re-run in debug mode to see more information: DEBUG=*snyk* <COMMAND>\nIf the issue persists contact support@snyk.io\n    at test (/snapshot/snyk/dist/cli/webpack:/snyk/src/cli/commands/test/index.ts:286:19)\n    at runCommand (/snapshot/snyk/dist/cli/webpack:/snyk/src/cli/main.ts:51:25)\n    at main (/snapshot/snyk/dist/cli/webpack:/snyk/src/cli/main.ts:310:11)\n    at /snapshot/snyk/dist/cli/webpack:/snyk/src/cli/index.ts:13:3\n    at Object.callHandlingUnexpectedErrors (/snapshot/snyk/dist/cli/webpack:/snyk/src/lib/unexpected-error.ts:28:5)",
+      "error-code": 500,
+      "command": "test"
+    },
+    "os": "macOS Ventura",
+    "osPlatform": "darwin",
+    "osRelease": "22.1.0",
+    "osArch": "x64",
+    "version": "1.1183.0",
+    "nodeVersion": "v16.16.0",
+    "standalone": true,
+    "integrationName": "CLI_V1_PLUGIN",
+    "integrationVersion": "1.1183.0",
+    "integrationEnvironment": "",
+    "integrationEnvironmentVersion": "",
+    "id": "6809e608fa6e62fa8d1c9612757eea5ab2c6af30",
+    "ci": false,
+    "durationMs": 1015,
+    "metrics": {
+      "network_time": {
+        "type": "timer",
+        "values": [],
+        "total": 0
+      },
+      "cpu_time": {
+        "type": "synthetic",
+        "values": [
+          1015
+        ],
+        "total": 1015
+      }
+    }
+  }
+}
+2024-05-08T19:48:30.645Z snyk sending request to: https://api.snyk.io/v1/analytics/cli
+2024-05-08T19:48:30.645Z snyk request body size: 1770
+2024-05-08T19:48:30.645Z snyk gzipped request body size: 785
+2024-05-08T19:48:30.646Z snyk:req request payload:  {"qs":{"org":"0e832e2f-6ab8-44f8-a2f8-40db8e6cf003"},"url":"https://api.snyk.io/v1/analytics/cli","json":true,"method":"post","headers":{"authorization":"token f6fbca67-93b1-41f9-8a49-302e6459a755","x-snyk-cli-version":"1.1183.0","content-encoding":"gzip","content-length":785},"timeout":300000}
+2024-05-08T19:48:30.648Z snyk using proxy: http://snykcli:39defca8-8e00-4d31-9592-e6b8ca94fe1e@127.0.0.1:60146
+2024-05-08T19:48:30.649Z snyk:req <Buffer 1f 8b 08 00 00 00 00 00 02 13 ed 55 6d 6f db 36 10 fe 2b 04 3f ad 85 f5 ea 58 55 84 6e 58 97 66 6d 80 e6 05 5d 93 2f f5 10 9c a8 93 cc 86 22 09 92 4a ... 735 more bytes>
+2024-05-08T19:48:31.568Z snyk:req null
+2024-05-08T19:48:31.568Z snyk:req response (200):  {"ok":true}
+2024-05-08T19:48:31.569Z snyk-metrics Timer timer/network_time stopped at 1715197711569. Elapsed time is 925

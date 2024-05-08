@@ -7,4 +7,4 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-moviepy = "1.0.3"
+Pillow = "10.0.1"
